@@ -27,8 +27,8 @@ This is a student only project for the 4 members, if you want to download it tha
 
 * **Thomas Rake (s3602236)** - *Initial work & Design* -
 * **Vinh Ngo (s3578687)** - *Backend Specialist* - 
-* **Zhaonan Tian (s3555701)** - *Not yet Decided* -
-* **Chenjie Yu (s3557899)** - *Not yet Decided* - 
+* **Zhaonan Tian (s3555701)** - *Design and Implementation* -
+* **Chenjie Yu (s3557899)** - *Design and Implementation* - 
 
 See also the list of [contributors](https://github.com/ThomasRake/SEF-HRM/graphs/contributors) who participated in this project.
 
