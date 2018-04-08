@@ -12,14 +12,14 @@ import java.text.*;
 	 	String contactPhone;
 	 	String address;
 	 	String input;
-	 	boolean vaild=false;
-	 	boolean vaildinput=false;
+	 	boolean vaild=false;//whether user want to renew his detail
+	 	boolean vaildinput=false;//whether user put invaild input
 	 	Scanner sc = new Scanner(System.in);
-	 	SimpleDateFormat fmt = new SimpleDateFormat("dd MM yyyy");
+	 	SimpleDateFormat fmt = new SimpleDateFormat("dd MM yyyy");//System will show the date format just like 08/09/2018
 	 	do{
 	 	System.out.println("Hi! Welcome to the RMIT, please fill in the details on the following questions.\nAnd after you finish typing, press enter to continue.");
 	 	System.out.println("Your Full Name:");
-	 	name=sc.nextLine();
+	 	name=sc.nextLine();//enter the details
 	 	System.out.println("Your date of brith dd:");
 	 	day=sc.nextLine();
 	 	System.out.println("Your date of brith mm:");
@@ -59,8 +59,8 @@ import java.text.*;
 	 		vaildinput=false;	
 	 		System.out.println("Please enter the vaild number.");
 	 	}
-	 	}while(vaildinput=false);
-	 	}while(vaild=false);
+	 	}while(vaildinput=false);//if user enter the wrong number,he will be requested to retype
+	 	}while(vaild=false);//if user want to change the details,he can type 2 to renew the details
  	}
 }
  
