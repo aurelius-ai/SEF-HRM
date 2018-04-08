@@ -8,7 +8,7 @@ public class SystemDriver {
 		boolean vaild=false;
 		Scanner sc = new Scanner(System.in);
 		do{
-		System.out.println("Do you have an account?\nIf you have, please enter 1 to login\nIf you don't have, please enter 2 to register.");
+		System.out.println("Do you have an account?\nIf you have, please enter 1 to Login\nIf you don't have, please enter 2 to register.");
 		input=sc.nextLine();//Choose login or register ID
 		if(input.equals("1"))
 		{
