@@ -1,11 +1,11 @@
- package HRSystem;
 import java.util.*;
 import java.time.*;
 import java.math.*;
 import java.text.*;
+ public class edit{
 
- public static void register() throws Exception
- 	{
+	 public void editprofile() throws ParseException
+	 {
 	 	String name;
 	 	String month,day,year;
 	 	String contactEmail;
