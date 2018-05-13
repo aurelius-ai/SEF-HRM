@@ -3,8 +3,9 @@
 	import java.awt.Toolkit;
 	import java.awt.event.ActionEvent;
 	import java.awt.event.ActionListener;
+import java.text.ParseException;
 
-	import javax.swing.JButton;
+import javax.swing.JButton;
 	import javax.swing.JFrame;
 	import javax.swing.JLabel;
 	import javax.swing.JOptionPane;
@@ -12,16 +13,16 @@
 	import javax.swing.JTextField;
 
 	public class login {
-		public static boolean causal=false;
-		public static boolean coco=false;
-		public static boolean approval=false;
 		public static void main(String[] args) {
+			dashboard d=new dashboard();
 			final String userName1 = "e1234567";//Causal staff
 			final String password1 = "1234567";
       final String userName2 = "e2345678";//approval staff
       final String password2 = "2345678";
       final String userName3 = "e3456789";//Co-co
       final String password3 = "3456789";
+      final String userName4 = "admin";
+      final String password4 ="admin";
 			JFrame jFrame = new JFrame("login");
 			Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 			jFrame.setBounds(((int)dimension.getWidth() - 200) / 2, ((int)dimension.getHeight() - 300) / 2, 200, 150);
@@ -53,16 +54,29 @@
 				public void actionPerformed(ActionEvent e) {
 					if(userName1.equals(text1.getText()) && password1.equals(text2.getText())) {
 						JOptionPane.showMessageDialog(null, "you are causal staff", "success", JOptionPane.INFORMATION_MESSAGE);
-						causal=true;
+						try {
+							d.dashboard1();
+						} catch (ParseException e1) {
+							// TODO Auto-generated catch block
+							e1.printStackTrace();
+						}
+						System.exit(0);
 					} 
           else if(userName2.equals(text1.getText()) && password2.equals(text2.getText())) {
 						JOptionPane.showMessageDialog(null, "you are approval staff", "success", JOptionPane.INFORMATION_MESSAGE);
-						approval=true;
+						d.dashboard2();
+						System.exit(0);
 					} 
           else if(userName3.equals(text1.getText()) && password3.equals(text2.getText())) {
 						JOptionPane.showMessageDialog(null, "you are Co-co", "success", JOptionPane.INFORMATION_MESSAGE);
-						coco=true;
+						d.dashboard3();
+						System.exit(0);
 					} 
+          else if(userName4.equals(text1.getText()) && password4.equals(text2.getText())) {
+				JOptionPane.showMessageDialog(null, "you are admin", "success", JOptionPane.INFORMATION_MESSAGE);
+				d.dashboard4();
+				System.exit(0);
+			} 
           else {
 						JOptionPane.showMessageDialog(null, "wrong id/password", "error", JOptionPane.ERROR_MESSAGE);
 						text1.setText("");
