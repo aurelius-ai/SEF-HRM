@@ -12,7 +12,9 @@
 	import javax.swing.JTextField;
 
 	public class login {
-
+		public static boolean causal=false;
+		public static boolean coco=false;
+		public static boolean approval=false;
 		public static void main(String[] args) {
 			final String userName1 = "e1234567";//Causal staff
 			final String password1 = "1234567";
@@ -51,12 +53,15 @@
 				public void actionPerformed(ActionEvent e) {
 					if(userName1.equals(text1.getText()) && password1.equals(text2.getText())) {
 						JOptionPane.showMessageDialog(null, "you are causal staff", "success", JOptionPane.INFORMATION_MESSAGE);
+						causal=true;
 					} 
           else if(userName2.equals(text1.getText()) && password2.equals(text2.getText())) {
 						JOptionPane.showMessageDialog(null, "you are approval staff", "success", JOptionPane.INFORMATION_MESSAGE);
+						approval=true;
 					} 
           else if(userName3.equals(text1.getText()) && password3.equals(text2.getText())) {
 						JOptionPane.showMessageDialog(null, "you are Co-co", "success", JOptionPane.INFORMATION_MESSAGE);
+						coco=true;
 					} 
           else {
 						JOptionPane.showMessageDialog(null, "wrong id/password", "error", JOptionPane.ERROR_MESSAGE);
