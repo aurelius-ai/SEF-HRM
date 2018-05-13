@@ -5,6 +5,7 @@ import java.awt.FlowLayout;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.text.ParseException;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -13,10 +14,17 @@ import javax.swing.JOptionPane;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 public class dashboard extends JFrame{
-		public void dashboard1()
+		String input;
+		Scanner sc = new Scanner(System.in);
+		edit e=new edit();
+		public void dashboard1() throws ParseException
 		{
 			System.out.println("1.View/Edit profile\n2.Apply Course\n3.View salary\n");
-			
+			input=sc.nextLine();
+			if (input.equals("1"))
+			{
+				e.editprofile();
+			}
 		}
 		public void dashboard2()
 		{
