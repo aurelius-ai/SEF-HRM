@@ -17,7 +17,7 @@ public class Course
 
 	public String getName()
 	{
-		reture name;
+		return name;
 	}
 
 	public void setName(String name)

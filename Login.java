@@ -12,17 +12,18 @@ import javax.swing.JButton;
 	import javax.swing.JPasswordField;
 	import javax.swing.JTextField;
 
-	public class login {
+	public class Login {
+		final static String userName1 = "e1234567";//Causal staff
+		final static String password1 = "1234567";
+		final static String userName2 = "e2345678";//approval staff
+		final static String password2 = "2345678";
+		final static String userName3 = "e3456789";//Co-co
+		final static String password3 = "3456789";
+		final static String userName4 = "admin";
+		final static String password4 ="admin";
 		public static void main(String[] args) {
+
 			dashboard d=new dashboard();
-			final String userName1 = "e1234567";//Causal staff
-			final String password1 = "1234567";
-      final String userName2 = "e2345678";//approval staff
-      final String password2 = "2345678";
-      final String userName3 = "e3456789";//Co-co
-      final String password3 = "3456789";
-      final String userName4 = "admin";
-      final String password4 ="admin";
 			JFrame jFrame = new JFrame("login");
 			Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
 			jFrame.setBounds(((int)dimension.getWidth() - 200) / 2, ((int)dimension.getHeight() - 300) / 2, 200, 150);

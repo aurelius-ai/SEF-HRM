@@ -16,14 +16,14 @@ import javax.swing.JTextField;
 public class dashboard extends JFrame{
 		String input;
 		Scanner sc = new Scanner(System.in);
-		edit e=new edit();
+		editProfile e=new editProfile();
 		public void dashboard1() throws ParseException
 		{
 			System.out.println("1.View/Edit profile\n2.Apply Course\n3.View salary\n");
 			input=sc.nextLine();
 			if (input.equals("1"))
 			{
-				e.editprofile();
+				e.editProfile();
 			}
 		}
 		public void dashboard2()
