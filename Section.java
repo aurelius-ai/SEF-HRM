@@ -6,6 +6,7 @@ public class Section {
     public String startTime;
     public String endTime;
     public User staff;
+    public ArrayList<User> studentList;
     public Section()
     {
         this.startTime = null;
@@ -16,8 +17,8 @@ public class Section {
         this.startTime = start;
         this.endTime = end;
     }
-    public void addStudent(){}
-    public void removeStudent(){}
+    public void addStudent(User student){this.studentList.add(student);}
+    public void removeStudent(User student){this.studentList.remove(student);}
     public String getStartTime(){return this.startTime;}
     public String getEndTime(){return this.endTime;}
     public void setStartTime(String newStart){this.startTime = newStart;}

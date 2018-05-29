@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public abstract class User
 {
@@ -43,15 +44,38 @@ abstract class approver extends User
 	protected ArrayList<Application> appList;
 	protected boolean decision;
 	public ArrayList<Application> viewCourseAllocation(){return appList;}
-	public boolean responsetoCourseAllocation(){return decision;}
+	public boolean responsetoCourseAllocation()
+	{
+		return decision;
+	}
 }
 abstract class courseCoordinator extends User
 {
 	protected ArrayList<casualStaff> staffList;
-	public Course designCoure(Course course){return course;}
+	public Course designCoure(Course course)
+	{
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Enter the Coursename: ");
+		course.setName(reader.nextLine());
+		System.out.println("Enter the course description: ");
+		course.setDescription(reader.nextLine());
+		System.out.println("Enter the course timetable: ");
+		course.setTimeTable(reader.nextLine());
+		System.out.println("Enter the number of required staff for the course:");
+		course.setNumOfRequiredCasualStaff(reader.nextInt());
+		System.out.println("Your "+ course.getName()+ " course has been created with the description of: "+ course.getDescription()+ ". The course has the time table as followed: "+ course.getTimeTable());
+		return course;
+	}
 	public ArrayList<casualStaff> reviewCasualStaff(){return staffList;}
-	public void selectCasualStaff(casualStaff staff){}
-	public void assignCasualStaff(casualStaff staff){}
+	public void selectCasualStaff(casualStaff staff)
+	{
+		this.staffList.add(staff);
+	}
+	public void assignCasualStaff(casualStaff staff)
+	{
+		selectCasualStaff(staff);
+		// assignTimeTable();
+	}
 	public Application sendAppToApprover(Application application){return application;}
 }
 abstract class admin extends User
@@ -59,5 +83,18 @@ abstract class admin extends User
 	public void addUser(User user){}
 	public void deleteUser(User user){}
 	public void updatePayRate(double rate){}
-	public Report generateReport(Report report){return report;}
+	public Report generateReport(Report report)
+	{
+		Scanner reader = new Scanner(System.in);
+		System.out.println("Enter name of the course to be reported: ");
+		report.courseName = reader.nextLine();
+		System.out.println("Enter the time table of the reported course: ");
+		report.courseTimeTable = reader.nextLine();
+		System.out.println("Enter the casual staff name of the course: ");
+		report.casualStaffName = reader.nextLine();
+		System.out.println("Enter the pay rate table: ");
+		report.coursePayRateTable = reader.nextLine();
+		System.out.println("Done, course report is generated.");
+		return report;
+	}
 }

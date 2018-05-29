@@ -29,6 +29,7 @@ public class Course
 	{
 		return description;
 	}
+	public String getTimeTable(){return timeTable;}
 
 	public void setDescription(String description)
 	{
@@ -39,7 +40,7 @@ public class Course
 	{
 		return numOfRequiredCasualStaff;
 	}
-
+	public void setTimeTable(String timeTable){this.timeTable = timeTable;}
 	public void setNumOfRequiredCasualStaff(int numOfRequiredCasualStaff)
 	{
 		this.numOfRequiredCasualStaff = numOfRequiredCasualStaff;
